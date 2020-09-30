@@ -18,3 +18,5 @@ LazyData: true
 RoxygenNote: 6.1.1
 Suggests: 
     testthat
+URL: https://github.com/jixing475/manuscriptsR
+BugReports: https://github.com/jixing475/manuscriptsR/issues
