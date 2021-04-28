@@ -55,7 +55,11 @@ Imports:
     rio,
     readr,
     manuscriptsR,
-    rcrossref
+    rcrossref,
+    tidystringdist,
+    ggpubr,
+    ggsci,
+    DataExplorer
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1

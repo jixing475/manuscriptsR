@@ -28,6 +28,7 @@
 #' @importFrom tidystringdist tidy_comb_all
 #' @importFrom ggpubr ggboxplot
 #' @importFrom ggsci scale_color_lancet
+#' @importFrom ggpubr ggboxplot stat_compare_means
 
 my_boxplot <- function(df, ...){
   meta <- 
@@ -56,8 +57,7 @@ my_boxplot <- function(df, ...){
   p <- ggpubr::ggboxplot(df, x = fac, y = num,
                  color = fac, shape = fac,
                  add = "jitter") +
-    stat_compare_means(comparisons = my_comparisons) + # Add pairwise comparisons p-value
-    stat_compare_means()  +               # Add global p-value label.y = 50
+    ggpubr::stat_compare_means(comparisons = my_comparisons) # Add pairwise comparisons p-value
     ggsci::scale_color_lancet()
   return(p)
 }

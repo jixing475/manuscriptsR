@@ -93,3 +93,70 @@ na_remove <- function(x){
     x <-x[which(!is.na(x))]
     return(x)
 }
+
+
+#' @title FUNCTION_TITLE
+#' @description FUNCTION_DESCRIPTION
+#' @param s PARAM_DESCRIPTION
+#' @param x PARAM_DESCRIPTION, Default: 0
+#' @return OUTPUT_DESCRIPTION
+#' @details DETAILS
+#' @examples 
+#' \dontrun{
+#' if(interactive()){
+#'  #EXAMPLE1
+#'  }
+#' }
+#' @rdname na_x2na_ifLessX
+#' @export 
+
+na_x2na_ifLessX <- function (s, x = 0) {
+    sapply(s, function(y)
+        ifelse(y < x, NA, y))
+}
+
+
+#' @title FUNCTION_TITLE
+#' @description FUNCTION_DESCRIPTION
+#' @param s PARAM_DESCRIPTION
+#' @param x PARAM_DESCRIPTION, Default: 0
+#' @return OUTPUT_DESCRIPTION
+#' @details DETAILS
+#' @examples 
+#' \dontrun{
+#' if(interactive()){
+#'  #EXAMPLE1
+#'  }
+#' }
+#' @rdname na_x2na_ifMoreX
+#' @export 
+
+na_x2na_ifMoreX <- function (s, x = 0) {
+    sapply(s, function(y)
+        ifelse(y > x, NA, y))
+}
+
+#' @title FUNCTION_TITLE
+#' @description FUNCTION_DESCRIPTION
+#' @param df PARAM_DESCRIPTION
+#' @return OUTPUT_DESCRIPTION
+#' @details DETAILS
+#' @examples 
+#' \dontrun{
+#' if(interactive()){
+#'  #EXAMPLE1
+#'  }
+#' }
+#' @seealso 
+#'  \code{\link[DataExplorer]{plot_missing}}
+#'  \code{\link[ggplot2]{ggtheme}}
+#' @rdname na_plot_missing
+#' @export 
+#' @importFrom DataExplorer plot_missing
+#' @importFrom ggplot2 theme_light
+#' 
+na_plot_missing <- function(df) {
+    df %>% 
+    DataExplorer::plot_missing(
+        ggtheme = ggplot2::theme_light())
+}
