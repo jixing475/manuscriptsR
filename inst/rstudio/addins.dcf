@@ -1,0 +1,27 @@
+Name: runCurrentRscript
+Description: Wrapper around \code{\link{system2}} to run Rscript with
+Binding: runCurrentRscript
+Interactive: false
+
+
+Name: Align_Comment
+Description: Align # in selection
+Binding: align_comment
+Interactive: false
+
+
+Name: Align_arrow
+Description: Align <- in selection
+Binding: align_arrow
+Interactive: false
+
+
+Name: Align_equal
+Description: New Addin Description
+Binding: align_equal
+Interactive: false
+
+Name: Quick View
+Description: Quickly view your data.
+Binding: quickview
+Interactive: false
